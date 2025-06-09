@@ -15,7 +15,7 @@ function App() {
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Live Preview</h3>
             <iframe 
               id="template-preview" 
-              src="http://app.usestencil.test:4000/live-preview/8be62eca-72de-4f81-9edc-a4dbeee6986f?token=SwabMCNLfDSaA7PoBdPbvj" 
+              src="https://app.usestencil.com/live-preview/e285d170-5a27-4819-8f1f-737f0a24ba34?token=EaxKAurZGNp3noN2B3yChc" 
               width="400" 
               height="400"
               className="border border-gray-200 rounded-lg"

@@ -9,7 +9,7 @@ function App() {
         <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">
           Stencil Embed Preview Demo
         </h1>
-        <div className="flex flex-col lg:flex-row gap-8 items-start justify-center">
+        <div className="flex flex-col lg:flex-row gap-4 items-start justify-center">
           <ProductForm />
           <div className="bg-white rounded-lg shadow-lg p-6">
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Live Preview</h3>

@@ -32,13 +32,38 @@ function ProductForm() {
     }
   };
 
+  const sendModificationsToIframe = (product) => {
+    const modifications = [
+      {
+        name: 'product',
+        text: product.productId
+      },
+      {
+        name: 'price',
+        text: product.price
+      }
+    ];
+
+    const message = {
+      namespace: 'stencil',
+      action: 'preview_changes',
+      data: modifications
+    };
+
+    const iframe = document.getElementById('template-preview');
+    if (iframe && iframe.contentWindow) {
+      iframe.contentWindow.postMessage(message, '*');
+    }
+  };
+
   const handleProductSelect = (product) => {
     setProductId(product.productId);
     setShowDropdown(false);
+    sendModificationsToIframe(product);
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
+    <div className="w-full max-w-lg p-8 bg-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold text-gray-800 mb-6">Product Search</h2>
       <div className="relative">
         <label htmlFor="productId" className="block text-sm font-medium text-gray-700 mb-2">
